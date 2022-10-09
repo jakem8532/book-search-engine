@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 import { useQuery, useMutation } from '@apollo/client';
@@ -6,7 +6,6 @@ import { GET_ME } from '../utils/queries';
 import { DELETE_BOOK } from '../utils/mutations'
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
-import { remove } from '../../../server/models/Book';
 
 const SavedBooks = () => {
   
@@ -16,9 +15,7 @@ const SavedBooks = () => {
 
   if (!userData?.username) {
     return (
-      <h4>
-        You need to be logged in to see this page!
-      </h4>
+      <h4>You need to be logged in to see this page</h4>
     )
   }
 
