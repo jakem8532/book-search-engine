@@ -15,7 +15,6 @@ const typeDefs = gql`
         bookId: String
         image: String
         title: String
-        link: String
     }
 
     type Query {
@@ -28,7 +27,6 @@ const typeDefs = gql`
         title: String
         bookId: String
         image: String
-        link: String
     }
 
     type Mutation {
@@ -40,7 +38,6 @@ const typeDefs = gql`
             title: String
             bookId: String
             image: String
-            link: String
             ) : User
         deleteBook(bookId: String!) : User
     }

@@ -32,7 +32,6 @@ export const SAVE_BOOK = gql`
         $title: String!
         $bookId: String!
         $image: String!
-        $link: String!
         ) {
         saveBook( 
             authors: $authors, 
@@ -40,7 +39,6 @@ export const SAVE_BOOK = gql`
             title: $title, 
             bookId: $bookId,
             image: $image,
-            link: $link
             ) {
             username
             email
@@ -51,7 +49,6 @@ export const SAVE_BOOK = gql`
                 title
                 bookId
                 image
-                link
             }
         }
     }
@@ -67,7 +64,6 @@ export const DELETE_BOOK = gql`
                 title
                 bookId
                 image
-                link
             }
         }
     }
